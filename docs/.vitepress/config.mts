@@ -5,6 +5,7 @@ import { VitePressSidebarOptions } from 'vitepress-sidebar/types';
 
 const vitePressOptions: UserConfig<NoInfer<DefaultTheme.Config>> = {
   title: "Snippets Portal",
+  base: '/SnippetsPortal/',
   description: "A VitePress Site",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -15,13 +16,17 @@ const vitePressOptions: UserConfig<NoInfer<DefaultTheme.Config>> = {
   vite: {
     plugins: [
       tailwindcss()
-    ]
+    ],
+    ssr: {
+      noExternal: ['vuetify']
+    }
   }
 };
 
 const vitePressSidebarOptions: VitePressSidebarOptions = {
   documentRootPath: '/docs',
-  collapsed: true
+  collapsed: true,
+  includeDotFiles: true
 }
 
 // https://vitepress.dev/reference/site-config
