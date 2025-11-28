@@ -9,5 +9,5 @@ hero:
   actions:
     - theme: brand
       text: Show Snippets
-      link: /dotnet/PropertyChangedInvoke
+      link: /dotnet/PropertyChangeInvoke
 ---
