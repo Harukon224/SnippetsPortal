@@ -1,9 +1,15 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-public class MainViewModel : INotifyPropertyChanged
+public class MainViewModel : INotifyPropertyChanging, INotifyPropertyChanged
 {
+    public event PropertyChangingEventHandler? PropertyChanging;
     public event PropertyChangedEventHandler? PropertyChanged;
+
+    protected void OnPropertyChanging([CallerMemberName] string? propertyName = null)
+    {
+        PropertyChanging?.Invoke(this, new PropertyChangingEventArgs(propertyName));
+    }
 
     protected void OnPropertyChanged([CallerMemberName] string? propertyName = null)
     {
@@ -17,6 +23,7 @@ public class MainViewModel : INotifyPropertyChanged
             return false;
         }
 
+        OnPropertyChanging(propertyName);
         field = value;
         OnPropertyChanged(propertyName);
         return true;
