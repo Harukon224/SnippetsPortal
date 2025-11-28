@@ -1,7 +1,7 @@
 ---
 title: TodaysDate
 categories:
- - Scriban
+  - Scriban
 ---
 
 <<< @/../Snippets/Scriban/TodaysDate.scriban.txt

@@ -1,7 +1,7 @@
 ---
 title: PropertyChangedInvoke.cs
 categories:
- - C#
+  - C#
 ---
 
 INotifyPropertyChangedの実装

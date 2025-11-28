@@ -13,6 +13,9 @@ const vitePressOptions: UserConfig<NoInfer<DefaultTheme.Config>> = {
       { text: 'Home', link: '/' },
     ],
   },
+  markdown: {
+    lineNumbers: true
+  },
   vite: {
     plugins: [
       tailwindcss()
@@ -25,7 +28,7 @@ const vitePressOptions: UserConfig<NoInfer<DefaultTheme.Config>> = {
 
 const vitePressSidebarOptions: VitePressSidebarOptions = {
   documentRootPath: '/docs',
-  collapsed: true,
+  collapsed: false,
   includeDotFiles: true
 }
 

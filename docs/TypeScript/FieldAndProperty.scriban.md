@@ -1,8 +1,8 @@
 ---
 title: FieldAndProperty.scriban
 categories:
- - TypeScript
- - Scriban
+  - TypeScript
+  - Scriban
 ---
 
 <<< @/../Snippets/TypeScript/FieldAndProperty.scriban.ts

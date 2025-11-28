@@ -6,11 +6,13 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.17",
+    "luxon": "^3.7.2",
     "tailwindcss": "^4.1.17",
     "vitepress": "^2.0.0-alpha.15",
     "vuetify": "^3.11.0"
   },
   "devDependencies": {
+    "@mdi/js": "^7.4.47",
     "vitepress-sidebar": "^1.33.0"
   }
 }
